@@ -1421,94 +1421,138 @@ section {
 }
 
 
+
 /* ============================= */
-/* 16. FOOTER                        */
+/* 16. FOOTER - MISE EN PAGE         */
 /* ============================= */
 
 .footer {
+    width: 100%;
+    padding: 55px 7% 20px;
     background: var(--bleu-nuit);
     border-top: 1px solid rgba(214, 173, 96, 0.2);
-    padding: 45px 8% 20px;
+    box-sizing: border-box;
 }
 
 .footer-contenu {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-    text-align: center;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.footer-identite {
+    flex: 1;
+}
+
+.footer-navigation {
+    flex: 1;
+}
+
+.footer-social {
+    flex: 1;
 }
 
 .footer-logo {
-    color: var(--blanc);
-    font-size: 24px;
+    display: inline-block;
+    color: var(--dore);
+    font-size: 25px;
     font-weight: 700;
     text-decoration: none;
+    margin-bottom: 15px;
 }
 
-.footer-logo span {
-    color: var(--dore);
-}
-
-.footer-contenu p {
+.footer-identite p {
     color: var(--gris);
+    margin-bottom: 10px;
     font-size: 14px;
 }
 
-.footer-liens {
+.footer-navigation,
+.footer-social {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-    margin-top: 5px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 13px;
 }
 
-.footer-liens a {
+.footer-navigation h3,
+.footer-social h3 {
+    color: var(--dore);
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.footer-navigation a,
+.footer-social a {
     color: var(--gris);
-    font-size: 13px;
     text-decoration: none;
-    transition: 0.3s ease;
+    font-size: 14px;
+    transition: 0.3s;
 }
 
-.footer-liens a:hover {
+.footer-navigation a:hover,
+.footer-social a:hover {
     color: var(--dore);
 }
 
-.footer-reseaux {
+.footer-social a {
     display: flex;
-    gap: 20px;
-    margin-top: 5px;
+    align-items: center;
+    gap: 12px;
 }
 
-.footer-reseaux a {
+.footer-social i {
     color: var(--dore);
-    font-size: 22px;
-    transition: 0.3s ease;
-}
-
-.footer-reseaux a:hover {
-    color: var(--dore-clair);
-    transform: translateY(-4px);
+    font-size: 18px;
 }
 
 .footer-bas {
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    margin-top: 30px;
+    width: 100%;
+    margin-top: 40px;
     padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
     text-align: center;
 }
 
 .footer-bas p {
     color: var(--gris);
     font-size: 12px;
+    margin: 0;
 }
 
-@media screen and (max-width: 480px) {
-    .footer-liens {
-        gap: 15px;
+@media (max-width: 700px) {
+    .footer-contenu {
+        flex-direction: column;
+        gap: 30px;
     }
+}
 
-    .footer {
-        padding: 35px 5% 20px;
+
+/* ===================================== */
+/* 17. ANIMATIONS AU DEFILEMENT              */
+/* ===================================== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Respect des préférences d'accessibilité */
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
     }
 }
