@@ -691,3 +691,200 @@ section {
     font-size: 0.75rem;
     line-height: 1.5;
 }
+
+
+/* ============================= */
+/* 9. SECTION PROJETS */
+/* ============================= */
+
+.projets {
+    padding: 100px 8%;
+    background: rgba(11, 29, 53, 0.45);
+}
+
+.projets-grille {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 50px auto 0;
+}
+
+.projet-carte {
+    position: relative;
+    padding: 30px;
+    background: var(--fond-carte);
+    border: 1px solid rgba(214, 173, 96, 0.2);
+    border-radius: 15px;
+    transition: 0.3s ease;
+    overflow: hidden;
+}
+
+.projet-carte:hover {
+    transform: translateY(-8px);
+    border-color: var(--dore);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.projet-icone {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(214, 173, 96, 0.12);
+    border: 1px solid rgba(214, 173, 96, 0.35);
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+.projet-icone i {
+    font-size: 28px;
+    color: var(--dore);
+}
+
+.projet-type {
+    display: inline-block;
+    color: var(--dore);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.projet-contenu h3 {
+    color: var(--blanc);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.projet-contenu p {
+    color: var(--gris);
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.projet-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.projet-technologies span {
+    padding: 7px 12px;
+    color: var(--dore-clair);
+    background: rgba(22, 75, 145, 0.3);
+    border: 1px solid rgba(214, 173, 96, 0.2);
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.bouton-projet {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+    padding: 11px 18px;
+    color: var(--bleu-nuit);
+    background: var(--dore);
+    border: 1px solid var(--dore);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.bouton-projet:hover {
+    color: var(--dore);
+    background: transparent;
+    transform: translateX(4px);
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 768px) {
+    .projets {
+        padding: 70px 5%;
+    }
+
+    .projets-grille {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .projet-carte {
+        padding: 25px;
+    }
+}
+
+
+/* ============================= */
+/* 10. PAGES DÉTAILLÉES DES PROJETS */
+/* ============================= */
+
+.detail-projet {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 160px 8% 80px;
+    min-height: 80vh;
+}
+
+.detail-projet h1 {
+    color: var(--blanc);
+    font-size: 2.8rem;
+    margin: 15px 0;
+}
+
+.detail-introduction {
+    color: var(--gris);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 45px;
+}
+
+.detail-bloc {
+    background: var(--fond-carte);
+    border: 1px solid rgba(214, 173, 96, 0.2);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 22px;
+}
+
+.detail-bloc h2 {
+    color: var(--dore);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.detail-bloc h2 i {
+    margin-right: 8px;
+}
+
+.detail-bloc p {
+    color: var(--gris);
+    line-height: 1.8;
+}
+
+.lien-retour {
+    color: var(--dore);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.lien-retour:hover {
+    color: var(--dore-clair);
+}
+
+@media screen and (max-width: 768px) {
+    .detail-projet {
+        padding: 130px 5% 60px;
+    }
+
+    .detail-projet h1 {
+        font-size: 2rem;
+    }
+
+    .detail-bloc {
+        padding: 20px;
+    }
+}
