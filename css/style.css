@@ -1139,3 +1139,376 @@ section {
     }
 
 }
+
+
+/* ============================= */
+/* 13. SECTION DOCUMENTS             */
+/* ============================= */
+
+.documents {
+    padding: 100px 8%;
+    position: relative;
+}
+
+.documents-grille {
+    max-width: 1100px;
+    margin: 50px auto 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.document-carte {
+    background: var(--fond-carte);
+    border: 1px solid rgba(214, 173, 96, 0.18);
+    border-radius: 15px;
+    padding: 35px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.document-carte:hover {
+    transform: translateY(-8px);
+    border-color: var(--dore);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.document-icone {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(214, 173, 96, 0.12);
+    border-radius: 15px;
+    color: var(--dore);
+    font-size: 27px;
+}
+
+.document-carte h3 {
+    color: var(--blanc);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.document-carte p {
+    color: var(--gris);
+    font-size: 14px;
+    line-height: 1.7;
+    min-height: 50px;
+    margin-bottom: 25px;
+}
+
+.bouton-document {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 11px 20px;
+    border: 1px solid var(--dore);
+    border-radius: 8px;
+    color: var(--dore-clair);
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s ease;
+}
+
+.bouton-document:hover {
+    background: var(--dore);
+    color: var(--bleu-nuit);
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 768px) {
+    .documents {
+        padding: 70px 5%;
+    }
+
+    .documents-grille {
+        grid-template-columns: 1fr;
+        margin-top: 35px;
+    }
+
+    .document-carte {
+        padding: 25px 20px;
+    }
+}
+
+
+/* ============================= */
+/* 14. SECTION CONTACT               */
+/* ============================= */
+
+.contact {
+    padding: 100px 8%;
+    position: relative;
+}
+
+.contact-conteneur {
+    max-width: 1100px;
+    margin: 50px auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.contact-texte h3 {
+    color: var(--blanc);
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.contact-texte p {
+    color: var(--gris);
+    line-height: 1.8;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.contact-liens {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-carte {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 22px;
+    background: var(--fond-carte);
+    border: 1px solid rgba(214, 173, 96, 0.18);
+    border-radius: 12px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.contact-carte:hover {
+    transform: translateX(8px);
+    border-color: var(--dore);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.contact-icone {
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(214, 173, 96, 0.12);
+    border-radius: 12px;
+    color: var(--dore);
+    font-size: 23px;
+}
+
+.contact-infos {
+    flex: 1;
+}
+
+.contact-infos h4 {
+    color: var(--blanc);
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.contact-infos p {
+    color: var(--gris);
+    font-size: 13px;
+}
+
+.contact-fleche {
+    color: var(--dore);
+    font-size: 15px;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 768px) {
+    .contact {
+        padding: 70px 5%;
+    }
+
+    .contact-conteneur {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin-top: 35px;
+    }
+
+    .contact-texte h3 {
+        font-size: 24px;
+    }
+
+    .contact-carte {
+        padding: 18px;
+        gap: 15px;
+    }
+}
+
+
+/* ============================= */
+/* 15. NAVIGATION                    */
+/* ============================= */
+
+.logo {
+    color: var(--blanc);
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--dore);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.navbar a {
+    color: var(--blanc);
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    color: var(--dore);
+}
+
+.navbar .nav-contact {
+    padding: 10px 17px;
+    border: 1px solid var(--dore);
+    border-radius: 7px;
+    color: var(--dore);
+}
+
+.navbar .nav-contact:hover {
+    background: var(--dore);
+    color: var(--bleu-nuit);
+}
+
+/* NAVIGATION RESPONSIVE */
+
+@media screen and (max-width: 900px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 5%;
+    }
+
+    .navbar {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        gap: 12px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+    }
+}
+
+
+/* ============================= */
+/* 16. FOOTER                        */
+/* ============================= */
+
+.footer {
+    background: var(--bleu-nuit);
+    border-top: 1px solid rgba(214, 173, 96, 0.2);
+    padding: 45px 8% 20px;
+}
+
+.footer-contenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    text-align: center;
+}
+
+.footer-logo {
+    color: var(--blanc);
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.footer-logo span {
+    color: var(--dore);
+}
+
+.footer-contenu p {
+    color: var(--gris);
+    font-size: 14px;
+}
+
+.footer-liens {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 5px;
+}
+
+.footer-liens a {
+    color: var(--gris);
+    font-size: 13px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.footer-liens a:hover {
+    color: var(--dore);
+}
+
+.footer-reseaux {
+    display: flex;
+    gap: 20px;
+    margin-top: 5px;
+}
+
+.footer-reseaux a {
+    color: var(--dore);
+    font-size: 22px;
+    transition: 0.3s ease;
+}
+
+.footer-reseaux a:hover {
+    color: var(--dore-clair);
+    transform: translateY(-4px);
+}
+
+.footer-bas {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin-top: 30px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bas p {
+    color: var(--gris);
+    font-size: 12px;
+}
+
+@media screen and (max-width: 480px) {
+    .footer-liens {
+        gap: 15px;
+    }
+
+    .footer {
+        padding: 35px 5% 20px;
+    }
+}
