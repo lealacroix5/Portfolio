@@ -598,3 +598,96 @@ section {
     }
 
 }
+
+
+/* =========================================
+   8. SECTION COMPÉTENCES
+========================================= */
+
+.competences {
+    background: rgba(7, 20, 38, 0.4);
+}
+
+.competences-conteneur {
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+}
+
+.competence-categorie {
+    width: 100%;
+}
+
+.categorie-titre {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid rgba(214, 173, 96, 0.25);
+}
+
+.categorie-titre i {
+    color: var(--dore);
+    font-size: 1.5rem;
+}
+
+.categorie-titre h3 {
+    color: var(--blanc);
+    font-size: 1.3rem;
+}
+
+/* Grille des compétences */
+
+.competences-grille {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.competence-carte {
+    min-height: 170px;
+
+    padding: 25px 18px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background: var(--fond-carte);
+    border: 1px solid rgba(214, 173, 96, 0.15);
+    border-radius: 12px;
+
+    transition: var(--transition);
+}
+
+.competence-carte:hover {
+    transform: translateY(-8px);
+    border-color: var(--dore);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25),
+        0 0 15px rgba(214, 173, 96, 0.08);
+}
+
+.competence-carte i {
+    font-size: 2.5rem;
+    color: var(--dore);
+    margin-bottom: 15px;
+}
+
+.competence-carte h4 {
+    color: var(--blanc);
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.competence-carte p {
+    color: var(--gris);
+    font-size: 0.75rem;
+    line-height: 1.5;
+}
