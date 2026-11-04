@@ -1,0 +1,252 @@
+
+/* =========================================
+   1. VARIABLES ET PARAMÈTRES GÉNÉRAUX
+========================================= */
+
+:root {
+    --bleu-nuit: #071426;
+    --bleu-fonce: #0b1d35;
+    --bleu-royal: #164b91;
+    --bleu-clair: #2675c9;
+
+    --dore: #d6ad60;
+    --dore-clair: #f1d69b;
+
+    --blanc: #ffffff;
+    --gris: #b8c4d4;
+
+    --fond-carte: rgba(18, 42, 72, 0.75);
+
+    --transition: 0.3s ease;
+}
+
+/* Réinitialisation */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--bleu-nuit);
+    color: var(--blanc);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Fond lumineux */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+
+    background:
+        radial-gradient(circle at 15% 20%, rgba(22, 75, 145, 0.25), transparent 35%),
+        radial-gradient(circle at 85% 75%, rgba(214, 173, 96, 0.08), transparent 30%),
+        var(--bleu-nuit);
+}
+
+/* Canvas des particules */
+
+#particles {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+/* =========================================
+   2. EN-TÊTE ET NAVIGATION
+========================================= */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(7, 20, 38, 0.85);
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(214, 173, 96, 0.15);
+
+    z-index: 100;
+}
+
+.logo {
+    color: var(--blanc);
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--dore);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.navbar a {
+    color: var(--gris);
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: var(--transition);
+    position: relative;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    background: var(--dore);
+    transition: var(--transition);
+}
+
+.navbar a:hover {
+    color: var(--dore-clair);
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================
+   3. STRUCTURE DES SECTIONS
+========================================= */
+
+section {
+    padding: 120px 8%;
+    position: relative;
+}
+
+.section {
+    min-height: 70vh;
+}
+
+.titre-section {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.titre-section > p {
+    color: var(--dore);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.titre-section h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-top: 10px;
+}
+
+.titre-section h2 span {
+    color: var(--dore);
+}
+
+
+/* =========================================
+   4. PIED DE PAGE
+========================================= */
+
+.footer {
+    padding: 30px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    background: #050e1b;
+    border-top: 1px solid rgba(214, 173, 96, 0.2);
+
+    color: var(--gris);
+    font-size: 0.85rem;
+}
+
+.footer a {
+    color: var(--dore);
+    transition: var(--transition);
+}
+
+.footer a:hover {
+    color: var(--blanc);
+}
+
+
+/* =========================================
+   5. ADAPTATION TABLETTES ET TÉLÉPHONES
+========================================= */
+
+@media screen and (max-width: 1100px) {
+
+    .header {
+        padding: 20px 5%;
+    }
+
+    .navbar {
+        gap: 15px;
+    }
+
+    .navbar a {
+        font-size: 0.75rem;
+    }
+
+    section {
+        padding: 100px 5%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+    .header {
+        position: absolute;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .navbar a {
+        font-size: 0.75rem;
+    }
+
+    section {
+        padding: 100px 6%;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
