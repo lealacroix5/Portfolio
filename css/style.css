@@ -698,26 +698,61 @@ section {
 /* ============================= */
 
 .projets {
-    padding: 100px 8%;
-    background: rgba(11, 29, 53, 0.45);
+    padding: 80px 8%;
+    background: var(--bleu-fonce);
 }
+
+/* GRILLE DES 3 PROJETS */
 
 .projets-grille {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 30px;
-    max-width: 1100px;
-    margin: 50px auto 0;
+
+    max-width: 1200px;
+    margin: 40px auto 0;
+    width: 100%;
+}
+
+/* CARTES DES PROJETS */
+
+.projets-grille .projet-carte {
+    min-width: 0;
+    height: 100%;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* TABLETTES */
+
+@media (max-width: 992px) {
+    .projets-grille {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+/* TÉLÉPHONES */
+
+@media (max-width: 600px) {
+    .projets {
+        padding: 60px 5%;
+    }
+
+    .projets-grille {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 }
 
 .projet-carte {
-    position: relative;
-    padding: 30px;
     background: var(--fond-carte);
-    border: 1px solid rgba(214, 173, 96, 0.2);
+    border: 1px solid rgba(214, 173, 96, 0.15);
     border-radius: 15px;
-    transition: 0.3s ease;
     overflow: hidden;
+    transition: 0.3s ease;
 }
 
 .projet-carte:hover {
@@ -727,93 +762,74 @@ section {
 }
 
 .projet-icone {
-    width: 65px;
-    height: 65px;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(214, 173, 96, 0.12);
-    border: 1px solid rgba(214, 173, 96, 0.35);
-    border-radius: 15px;
-    margin-bottom: 25px;
+    background: linear-gradient(135deg, var(--bleu-royal), var(--bleu-nuit));
+    color: var(--dore);
+    font-size: 3rem;
 }
 
-.projet-icone i {
-    font-size: 28px;
-    color: var(--dore);
-}
-
-.projet-type {
-    display: inline-block;
-    color: var(--dore);
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
+.projet-contenu {
+    padding: 25px;
 }
 
 .projet-contenu h3 {
-    color: var(--blanc);
-    font-size: 1.5rem;
+    color: var(--dore-clair);
     margin-bottom: 15px;
 }
 
 .projet-contenu p {
     color: var(--gris);
     line-height: 1.7;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .projet-technologies {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
+    margin-bottom: 25px;
 }
 
 .projet-technologies span {
-    padding: 7px 12px;
+    background: rgba(38, 117, 201, 0.15);
     color: var(--dore-clair);
-    background: rgba(22, 75, 145, 0.3);
-    border: 1px solid rgba(214, 173, 96, 0.2);
+    padding: 6px 12px;
     border-radius: 20px;
     font-size: 0.8rem;
 }
 
 .bouton-projet {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 25px;
-    padding: 11px 18px;
-    color: var(--bleu-nuit);
-    background: var(--dore);
+    display: inline-block;
+    padding: 10px 18px;
     border: 1px solid var(--dore);
-    border-radius: 8px;
+    border-radius: 25px;
+    color: var(--dore);
     text-decoration: none;
-    font-weight: 600;
     transition: 0.3s ease;
 }
 
 .bouton-projet:hover {
-    color: var(--dore);
-    background: transparent;
-    transform: translateX(4px);
+    background: var(--dore);
+    color: var(--bleu-nuit);
 }
 
-/* RESPONSIVE */
+/* ADAPTATION TABLETTE ET MOBILE */
+@media (max-width: 1000px) {
+    .projets-grille {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
-@media screen and (max-width: 768px) {
+@media (max-width: 650px) {
     .projets {
-        padding: 70px 5%;
+        padding: 70px 6%;
     }
 
     .projets-grille {
         grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .projet-carte {
-        padding: 25px;
     }
 }
 
@@ -1432,14 +1448,24 @@ section {
     background: var(--bleu-nuit);
     border-top: 1px solid rgba(214, 173, 96, 0.2);
     box-sizing: border-box;
+    display: block;
+    text-align: center;
 }
 
 .footer-contenu {
-    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
-    gap: 50px;
+    gap: 80px;
+}
+
+.footer-identite,
+.footer-navigation,
+.footer-social {
+    flex: 1;
+    text-align: center;
 }
 
 .footer-identite {
@@ -1473,7 +1499,7 @@ section {
 .footer-social {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 13px;
 }
 
@@ -1525,7 +1551,15 @@ section {
 @media (max-width: 700px) {
     .footer-contenu {
         flex-direction: column;
-        gap: 30px;
+        align-items: center;
+        gap: 35px;
+    }
+
+    .footer-identite,
+    .footer-navigation,
+    .footer-social {
+        width: 100%;
+        text-align: center;
     }
 }
 
