@@ -15,8 +15,16 @@ if (canvas) {
     const particleCount = 75;
     const connectionDistance = 130;
 
+    // COULEURS DES PARTICULES
+    const colors = [
+        "214, 173, 96",  // Doré
+        "199, 123, 104"  // Terracotta
+    ];
+
     function resizeCanvas() {
-        const ratio = Math.min(window.devicePixelRatio || 1, 2);
+        const ratio = Math.min(
+            window.devicePixelRatio || 1, 2
+        );
 
         width = window.innerWidth;
         height = window.innerHeight;
@@ -39,6 +47,11 @@ if (canvas) {
 
             this.speedX = (Math.random() - 0.5) * 0.5;
             this.speedY = (Math.random() - 0.5) * 0.5;
+
+            // Couleur aléatoire pour chaque particule
+            this.color = colors[
+                Math.floor(Math.random() * colors.length)
+            ];
         }
 
         move() {
@@ -56,9 +69,18 @@ if (canvas) {
 
         draw() {
             ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
 
-            ctx.fillStyle = "rgba(214, 173, 96, 0.8)";
+            ctx.arc(
+                this.x,
+                this.y,
+                this.size,
+                0,
+                Math.PI * 2
+            );
+
+            // Affichage doré ou terracotta
+            ctx.fillStyle = `rgba(${this.color}, 0.8)`;
+
             ctx.fill();
         }
     }
@@ -74,20 +96,34 @@ if (canvas) {
     function connectParticles() {
         for (let i = 0; i < particles.length; i++) {
             for (let j = i + 1; j < particles.length; j++) {
+
                 const dx = particles[i].x - particles[j].x;
                 const dy = particles[i].y - particles[j].y;
 
-                const distance = Math.sqrt(dx * dx + dy * dy);
+                const distance = Math.sqrt(
+                    dx * dx + dy * dy
+                );
 
                 if (distance < connectionDistance) {
-                    const opacity = 1 - distance / connectionDistance;
+                    const opacity =
+                        1 - distance / connectionDistance;
 
                     ctx.beginPath();
-                    ctx.moveTo(particles[i].x, particles[i].y);
-                    ctx.lineTo(particles[j].x, particles[j].y);
 
+                    ctx.moveTo(
+                        particles[i].x,
+                        particles[i].y
+                    );
+
+                    ctx.lineTo(
+                        particles[j].x,
+                        particles[j].y
+                    );
+
+                    // La ligne prend la couleur
+                    // de la première particule
                     ctx.strokeStyle =
-                        `rgba(214, 173, 96, ${opacity * 0.25})`;
+                        `rgba(${particles[i].color}, ${opacity * 0.25})`;
 
                     ctx.lineWidth = 1;
                     ctx.stroke();
@@ -117,7 +153,6 @@ if (canvas) {
         resizeCanvas();
     });
 }
-
 
 /* ===================================== */
 /* 2. DEFILEMENT FLUID                   */

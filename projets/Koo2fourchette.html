@@ -1,76 +1,480 @@
 
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Koo2fourchette | Mon portfolio</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
+    <title>Koo2fourchette | Portfolio Léa Lacroix</title>
+
+    <!-- CSS DU PORTFOLIO -->
     <link rel="stylesheet" href="../css/style.css">
+
+    <!-- ICÔNES -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- POLICE -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
           rel="stylesheet">
 </head>
 
 <body>
 
+    <!-- ===================================== -->
+    <!-- HEADER -->
+    <!-- ===================================== -->
+
     <header class="header">
+
         <nav class="navbar">
-            <a href="../index.html" class="logo">Mon Portfolio</a>
-            <a href="../index.html#projets" class="lien-retour">
-                <i class="fa-solid fa-arrow-left"></i> Retour aux projets
+
+            <a href="../index.html" class="logo">
+                Mon Portfolio
             </a>
+
+            <a href="../index.html#projets"
+               class="lien-retour">
+
+                <i class="fa-solid fa-arrow-left"></i>
+                Retour aux projets
+
+            </a>
+
         </nav>
+
     </header>
+
+
+    <!-- ===================================== -->
+    <!-- CONTENU PRINCIPAL -->
+    <!-- ===================================== -->
 
     <main class="detail-projet">
 
-        <span class="projet-type">Projet scolaire</span>
+        <span class="projet-type">
+            Projet scolaire - BTS SIO SLAM
+        </span>
+
         <h1>Koo2fourchette</h1>
+
         <p class="detail-introduction">
-            Présentation détaillée de mon projet réalisé durant ma formation BTS SIO.
+            Développement d'un site web de recettes de cuisine
+            permettant de présenter différentes recettes
+            et de gérer des comptes utilisateurs.
         </p>
 
-        <section class="detail-bloc">
-            <h2><i class="fa-solid fa-circle-info"></i> Présentation du projet</h2>
-            <p>
-                Ici, je présenterai le contexte de Koo2fourchette,
-                son objectif et le besoin auquel le projet répond.
-            </p>
-        </section>
+
+        <!-- ================================= -->
+        <!-- 1. PRÉSENTATION -->
+        <!-- ================================= -->
+        <!-- GRILLE DES INFORMATIONS DU PROJET -->
+        <div class="detail-grille">
 
         <section class="detail-bloc">
-            <h2><i class="fa-solid fa-bullseye"></i> Objectifs</h2>
+
+            <h2>
+                <i class="fa-solid fa-circle-info"></i>
+                Présentation du projet
+            </h2>
+
             <p>
-                Je détaillerai les objectifs du projet et les fonctionnalités
-                principales de l'application.
+                KOO2fourchette consiste à développer un site web
+                consacré aux recettes de cuisine.
+                L'application présente différentes recettes,
+                des images de plats et un espace permettant
+                aux utilisateurs de créer un compte et
+                de se connecter.
             </p>
+
+            <p>
+                Ce projet m'a permis de découvrir les
+                différentes étapes du développement d'un
+                site web et de travailler avec plusieurs
+                technologies complémentaires.
+            </p>
+
         </section>
 
+
+        <!-- ================================= -->
+        <!-- 2. OBJECTIFS -->
+        <!-- ================================= -->
+
         <section class="detail-bloc">
-            <h2><i class="fa-solid fa-code"></i> Technologies utilisées</h2>
+
+            <h2>
+                <i class="fa-solid fa-bullseye"></i>
+                Objectifs du projet
+            </h2>
+
+            <p>
+                Les principaux objectifs du projet
+                étaient les suivants :
+            </p>
+
+            <ul>
+                <li>
+                    Créer la structure d'un site web
+                    avec HTML.
+                </li>
+
+                <li>
+                    Mettre en forme les différentes
+                    pages avec CSS.
+                </li>
+
+                <li>
+                    Présenter des recettes de cuisine
+                    accompagnées d'images.
+                </li>
+
+                <li>
+                    Mettre en place une base de données
+                    MySQL.
+                </li>
+
+                <li>
+                    Développer un système d'inscription
+                    et de connexion avec PHP.
+                </li>
+
+                <li>
+                    Gérer les sessions des utilisateurs.
+                </li>
+
+                <li>
+                    Comprendre les échanges entre
+                    une application PHP et une
+                    base de données.
+                </li>
+            </ul>
+
+        </section>
+
+
+        <!-- ================================= -->
+        <!-- 3. TECHNOLOGIES -->
+        <!-- ================================= -->
+
+        <section class="detail-bloc">
+
+            <h2>
+                <i class="fa-solid fa-code"></i>
+                Technologies utilisées
+            </h2>
+
             <div class="projet-technologies">
-                <span>À compléter</span>
+
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>PHP</span>
+                <span>MySQL</span>
+                <span>SQL</span>
+                <span>PDO</span>
+
             </div>
+
+            <p>
+                HTML et CSS ont été utilisés pour
+                structurer et mettre en forme les pages.
+            </p>
+
+            <p>
+                PHP permet de gérer l'inscription,
+                l'authentification et les sessions
+                des utilisateurs.
+            </p>
+
+            <p>
+                MySQL permet de stocker les informations
+                relatives aux membres, aux catégories
+                et aux recettes.
+            </p>
+
         </section>
+
+
+        <!-- ================================= -->
+        <!-- 4. FONCTIONNALITÉS -->
+        <!-- ================================= -->
 
         <section class="detail-bloc">
-            <h2><i class="fa-solid fa-laptop-code"></i> Travail réalisé</h2>
+
+            <h2>
+                <i class="fa-solid fa-list-check"></i>
+                Fonctionnalités développées
+            </h2>
+
+            <ul>
+                <li>
+                    Page d'accueil présentant plusieurs
+                    recettes de cuisine.
+                </li>
+
+                <li>
+                    Affichage d'images et de titres
+                    de recettes.
+                </li>
+
+                <li>
+                    Formulaire de création de compte.
+                </li>
+
+                <li>
+                    Formulaire de connexion.
+                </li>
+
+                <li>
+                    Vérification des identifiants
+                    enregistrés dans la base de données.
+                </li>
+
+                <li>
+                    Gestion des sessions PHP.
+                </li>
+
+                <li>
+                    Déconnexion de l'utilisateur.
+                </li>
+            </ul>
+
             <p>
-                Je présenterai ici les tâches que j'ai personnellement réalisées,
-                les difficultés rencontrées et les solutions apportées.
+                Certaines fonctionnalités, notamment
+                la recherche et le dépôt de recettes,
+                sont représentées dans l'interface,
+                mais ne sont pas encore opérationnelles.
             </p>
+
         </section>
 
-        <a href="../index.html#projets" class="bouton-projet">
-            <i class="fa-solid fa-arrow-left"></i> Retour aux projets
+
+        <!-- ================================= -->
+        <!-- 5. BASE DE DONNÉES -->
+        <!-- ================================= -->
+
+        <section class="detail-bloc">
+
+            <h2>
+                <i class="fa-solid fa-database"></i>
+                Base de données
+            </h2>
+
+            <p>
+                Le projet s'appuie sur une base
+                de données MySQL nommée
+                koo_2_fourchette.
+            </p>
+
+            <p>
+                Elle contient notamment trois tables
+                principales :
+            </p>
+
+            <ul>
+
+                <li>
+                    <strong>membres :</strong>
+                    informations des utilisateurs,
+                    identifiants et mots de passe.
+                </li>
+
+                <li>
+                    <strong>recettes :</strong>
+                    informations sur les recettes,
+                    ingrédients, préparation et
+                    temps de cuisson.
+                </li>
+
+                <li>
+                    <strong>categories :</strong>
+                    classement des recettes selon
+                    leurs catégories.
+                </li>
+
+            </ul>
+
+            <p>
+                La connexion entre PHP et MySQL
+                est réalisée à l'aide de PDO.
+                Les requêtes préparées sont
+                utilisées dans les formulaires
+                d'inscription et de connexion.
+            </p>
+
+        </section>
+
+
+        <!-- ================================= -->
+        <!-- 6. TRAVAIL RÉALISÉ -->
+        <!-- ================================= -->
+
+        <section class="detail-bloc">
+
+            <h2>
+                <i class="fa-solid fa-laptop-code"></i>
+                Travail réalisé
+            </h2>
+
+            <p>
+                Le projet comprend plusieurs
+                parties techniques :
+            </p>
+
+            <ul>
+
+                <li>
+                    Création de la structure HTML
+                    des différentes pages.
+                </li>
+
+                <li>
+                    Mise en forme de l'interface
+                    avec CSS.
+                </li>
+
+                <li>
+                    Intégration des images et
+                    des éléments de navigation.
+                </li>
+
+                <li>
+                    Développement des formulaires
+                    d'inscription et de connexion.
+                </li>
+
+                <li>
+                    Utilisation de PHP pour
+                    gérer les sessions.
+                </li>
+
+                <li>
+                    Connexion à une base MySQL
+                    avec PDO.
+                </li>
+
+            </ul>
+
+            <p>
+                Ce travail m'a permis de mieux
+                comprendre l'organisation d'un
+                projet web et les interactions entre
+                les différentes technologies.
+            </p>
+
+        </section>
+
+
+        <!-- ================================= -->
+        <!-- 7. COMPÉTENCES ACQUISES -->
+        <!-- ================================= -->
+
+        <section class="detail-bloc">
+
+            <h2>
+                <i class="fa-solid fa-graduation-cap"></i>
+                Compétences développées
+            </h2>
+
+            <ul>
+
+                <li>
+                    Structurer une page web avec HTML.
+                </li>
+
+                <li>
+                    Mettre en forme un site avec CSS.
+                </li>
+
+                <li>
+                    Comprendre le fonctionnement
+                    des formulaires HTML.
+                </li>
+
+                <li>
+                    Utiliser PHP pour traiter
+                    des données côté serveur.
+                </li>
+
+                <li>
+                    Communiquer avec une base MySQL.
+                </li>
+
+                <li>
+                    Comprendre les principes
+                    d'authentification et de session.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- ================================= -->
+        <!-- 8. BILAN -->
+        <!-- ================================= -->
+
+        <section class="detail-bloc">
+
+            <h2>
+                <i class="fa-solid fa-chart-line"></i>
+                Bilan du projet
+            </h2>
+
+            <p>
+                Koo2fourchette fait partie de mes
+                premiers projets de développement web.
+            </p>
+
+            <p>
+                Il m'a permis de découvrir la
+                création d'un site comportant
+                une interface utilisateur et des
+                traitements côté serveur.
+            </p>
+
+            <p>
+                J'ai également pu approfondir
+                mes connaissances en HTML, CSS,
+                PHP et MySQL.
+            </p>
+
+            <p>
+                Ce projet constitue une première
+                expérience dans le développement
+                d'applications web.
+            </p>
+
+        </section>
+        </div>
+
+        <!-- ================================= -->
+        <!-- RETOUR AUX PROJETS -->
+        <!-- ================================= -->
+
+        <a href="../index.html#projets"
+           class="bouton-projet">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            Retour aux projets
+
         </a>
 
     </main>
 
+
+    <!-- ===================================== -->
+    <!-- FOOTER -->
+    <!-- ===================================== -->
+
     <footer class="footer">
-        <p>© 2026 - Portfolio de Léa Lacroix</p>
+
+        <p>
+            © 2026 - Portfolio de Léa Lacroix
+        </p>
+
     </footer>
 
 </body>
