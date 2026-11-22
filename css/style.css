@@ -1375,6 +1375,60 @@ section {
 
 
 /* =========================================
+   BOUTONS DE LA VEILLE TECHNOLOGIQUE
+========================================= */
+
+.veille-boutons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Boutons consulter et télécharger */
+
+.veille-boutons .bouton-document {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    width: 100%;
+    padding: 12px 15px;
+}
+
+/* Bouton télécharger en doré */
+
+.veille-boutons .veille-telecharger {
+    background: transparent;
+    border: 1px solid var(--dore);
+    color: var(--dore-clair);
+}
+
+.veille-boutons .veille-telecharger:hover {
+    background: var(--dore);
+    color: var(--bleu-nuit);
+}
+
+/* Aligner les cartes des documents */
+
+.document-carte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.document-carte > .bouton-document {
+    margin-top: auto;
+}
+
+.document-carte .veille-boutons {
+    margin-top: auto;
+}
+
+
+/* =========================================
    13. SECTION CONTACT
 ========================================= */
 
