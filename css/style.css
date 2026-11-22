@@ -491,22 +491,109 @@ section {
     font-size: 0.95rem;
 }
 
-/* Boutons du CV */
 
-.apropos-texte .btn {
-    margin-top: 15px;
+/* =========================================
+   DOCUMENTS PROFESSIONNELS - CV ET LETTRE
+========================================= */
+
+/* TITRE ET GRILLE DES DOCUMENTS */
+
+.documents-professionnels {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+
+    width: 100%;
+    margin-top: 30px;
 }
 
-.apropos-texte .btn-telecharger-cv {
+/* CARTES DES DOCUMENTS */
+
+.document-pro-carte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-width: 0;
+    padding: 22px 15px;
+
+    text-align: center;
+
+    background: var(--fond-carte);
+
+    border: 1px solid var(--bordure-carte);
+    border-radius: 12px;
+
+    transition: var(--transition);
+}
+
+/* SURVOL DES CARTES */
+
+.document-pro-carte:hover {
+    transform: translateY(-5px);
+    border-color: var(--terracotta);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ICÔNES */
+
+.document-pro-carte > i {
+    font-size: 30px;
+    color: var(--terracotta-clair);
+    margin-bottom: 15px;
+}
+
+/* TITRES */
+
+.document-pro-carte h4 {
+    color: var(--dore-clair);
+    font-size: 15px;
+
+    margin-bottom: 20px;
+}
+
+/* CONTENEUR DES BOUTONS */
+
+.document-pro-boutons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 100%;
+    margin-top: auto;
+}
+
+/* BOUTON CONSULTER */
+
+.document-pro-boutons .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    margin: 0;
+    padding: 11px 12px;
+
+    font-size: 12px;
+    text-align: center;
+}
+
+/* BOUTON TÉLÉCHARGER */
+
+.document-pro-boutons .btn-telecharger-cv {
     background: transparent;
     border: 1px solid var(--dore);
     color: var(--dore-clair);
 }
 
-.apropos-texte .btn-telecharger-cv:hover {
+/* SURVOL TÉLÉCHARGER */
+
+.document-pro-boutons .btn-telecharger-cv:hover {
     background: var(--dore);
     color: var(--bleu-nuit);
 }
+
 
 /* Cartes d'informations */
 
@@ -1665,21 +1752,38 @@ section {
     }
 }
 
+
 @media screen and (max-width: 550px) {
+
+    /* Informations À propos */
 
     .apropos-informations {
         grid-template-columns: 1fr;
     }
 
-    .apropos-texte .btn {
+    /* CV et lettre de motivation */
+
+    .documents-professionnels {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .document-pro-carte {
+        padding: 25px 20px;
+    }
+
+    .document-pro-boutons .btn {
         width: 100%;
     }
+
+    /* Titres des sections */
 
     .titre-section,
     .section-titre {
         margin-bottom: 35px;
     }
 }
+
 
 @media screen and (max-width: 480px) {
 
