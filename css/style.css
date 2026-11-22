@@ -1375,6 +1375,87 @@ section {
 
 
 /* =========================================
+   PROCEDURES DANS LA CARTE DOCUMENTS
+========================================= */
+
+.liste-procedures {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.procedure-item {
+    width: 100%;
+    padding-top: 18px;
+    border-top: 1px solid
+        rgba(199, 123, 104, 0.25);
+}
+
+.procedure-item h4 {
+    color: var(--terracotta-clair);
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.procedure-item p {
+    color: var(--gris);
+    font-size: 13px;
+    line-height: 1.6;
+
+    min-height: 0;
+    margin-bottom: 12px;
+}
+
+.procedure-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.procedure-actions .bouton-document {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    min-width: 0;
+    padding: 10px 6px;
+
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.procedure-actions .bouton-telecharger {
+    background: transparent;
+    border-color: var(--dore);
+    color: var(--dore-clair);
+}
+
+.procedure-actions .bouton-telecharger:hover {
+    background: var(--dore);
+    color: var(--bleu-nuit);
+}
+
+/* Garde les trois cartes alignées en haut */
+
+.documents-grille {
+    align-items: stretch;
+}
+
+/* Adaptation aux écrans plus étroits */
+
+@media screen and (max-width: 1150px) {
+
+    .procedure-actions {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================
    BOUTONS DE LA VEILLE TECHNOLOGIQUE
 ========================================= */
 
