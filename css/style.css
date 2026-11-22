@@ -830,6 +830,27 @@ section {
     margin-bottom: 10px;
 }
 
+/* STATUT DES PROJETS EN COURS */
+
+.projet-statut {
+    display: inline-block;
+
+    padding: 6px 12px;
+    margin-bottom: 15px;
+
+    background: rgba(199, 123, 104, 0.15);
+
+    border: 1px solid var(--terracotta);
+    border-radius: 20px;
+
+    color: var(--terracotta-clair);
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+
 .projet-contenu h3 {
     color: var(--dore-clair);
     margin-bottom: 15px;
@@ -1027,6 +1048,109 @@ section {
 
 
 /* =========================================
+   CAPTURE D'ÉCRAN KOO2FOURCHETTE
+========================================= */
+
+/* Bloc contenant la capture */
+
+.capture-projet {
+    width: 100%;
+    margin-top: 35px;
+    margin-bottom: 35px;
+
+    padding: 30px;
+
+    background: var(--fond-carte);
+
+    border: 1px solid var(--bordure-carte);
+    border-radius: 15px;
+}
+
+/* Titre */
+
+.capture-projet h2 {
+    color: var(--dore);
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.capture-projet h2 i {
+    color: var(--terracotta-clair);
+    margin-right: 10px;
+}
+
+/* Description */
+
+.capture-projet > p {
+    color: var(--gris);
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* Conteneur de l'image */
+
+.capture-conteneur {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+/* Image */
+
+.capture-conteneur img {
+    display: block;
+
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+
+    margin: 0 auto;
+
+    border: 1px solid var(--terracotta);
+    border-radius: 12px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25);
+
+    transition: transform 0.3s ease;
+}
+
+/* Animation légère */
+
+.capture-conteneur img:hover {
+    transform: scale(1.01);
+}
+
+/* Légende */
+
+.capture-conteneur figcaption {
+    margin-top: 15px;
+
+    color: var(--gris);
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+/* Adaptation aux téléphones */
+
+@media screen and (max-width: 768px) {
+
+    .capture-projet {
+        padding: 20px;
+        margin-top: 25px;
+    }
+
+    .capture-projet h2 {
+        font-size: 1.2rem;
+    }
+
+    .capture-conteneur img {
+        border-radius: 8px;
+    }
+}
+
+
+/* =========================================
    10. SECTION EXPÉRIENCES
 ========================================= */
 
@@ -1130,6 +1254,10 @@ section {
 
 .experience-carte .bouton-projet {
     margin-top: 5px;
+}
+.detail-projet > .bouton-projet {
+    display: inline-flex;
+    margin-top: 20px;
 }
 
 
@@ -1280,52 +1408,71 @@ section {
     position: relative;
 }
 
-/* Trois documents sur la même ligne */
+/* =========================================
+   GRILLE DES DOCUMENTS
+========================================= */
 
 .documents-grille {
-    max-width: 1100px;
-    margin: 50px auto 0;
-
     display: grid;
-    grid-template-columns: repeat(
-        3,
-        minmax(0, 1fr)
-    );
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 
     gap: 25px;
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 50px auto 0;
+
+    /* Chaque carte prend sa hauteur naturelle */
+    align-items: start;
 }
 
-/* Cartes documents */
+/* =========================================
+   CARTES DOCUMENTS
+========================================= */
 
 .document-carte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 100%;
+    min-width: 0;
+    height: auto;
+
+    padding: 30px 25px;
+
     background: var(--fond-carte);
     border: 1px solid var(--bordure-carte);
     border-radius: 15px;
 
-    padding: 35px;
     text-align: center;
 
     transition: var(--transition);
 }
 
 .document-carte:hover {
-    transform: translateY(-8px);
+    transform: translateY(-6px);
     border-color: var(--terracotta);
 
     box-shadow:
         0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Icônes */
+/* =========================================
+   ICÔNES DES DOCUMENTS
+========================================= */
 
 .document-icone {
-    width: 65px;
-    height: 65px;
-    margin: 0 auto 20px;
-
     display: flex;
     align-items: center;
     justify-content: center;
+
+    width: 65px;
+    height: 65px;
+    flex-shrink: 0;
+
+    margin: 0 auto 20px;
 
     background: var(--terracotta-transparent);
     border-radius: 15px;
@@ -1334,36 +1481,55 @@ section {
     font-size: 27px;
 }
 
+/* =========================================
+   TITRES ET DESCRIPTIONS
+========================================= */
+
 .document-carte h3 {
     color: var(--blanc);
     font-size: 20px;
+    line-height: 1.4;
+
     margin-bottom: 15px;
 }
 
-.document-carte p {
+.document-carte > p {
     color: var(--gris);
     font-size: 14px;
     line-height: 1.7;
 
-    min-height: 50px;
-    margin-bottom: 25px;
+    /* Plus de hauteur minimale forcée */
+    min-height: 0;
+
+    margin-bottom: 18px;
 }
 
-/* Boutons documents */
+/* =========================================
+   BOUTONS GÉNÉRAUX DES DOCUMENTS
+========================================= */
 
 .bouton-document {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
 
-    padding: 11px 20px;
+    gap: 8px;
+
+    min-width: 0;
+    padding: 11px 15px;
+
+    background: transparent;
 
     border: 1px solid var(--terracotta);
     border-radius: 8px;
 
     color: var(--terracotta-clair);
-    font-size: 13px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.4;
+
+    text-align: center;
+    text-decoration: none;
 
     transition: var(--transition);
 }
@@ -1373,22 +1539,104 @@ section {
     color: var(--bleu-nuit);
 }
 
+/* Bouton télécharger doré */
+
+.bouton-telecharger {
+    background: transparent;
+    border-color: var(--dore);
+    color: var(--dore-clair);
+}
+
+.bouton-telecharger:hover {
+    background: var(--dore);
+    color: var(--bleu-nuit);
+}
+
 
 /* =========================================
-   PROCEDURES DANS LA CARTE DOCUMENTS
+   PRÉSENTATION DE LA FORMATION BTS SIO
+========================================= */
+
+.formation-details {
+    width: 100%;
+    margin: 10px 0 0;
+
+    text-align: center;
+}
+
+.formation-details h4 {
+    color: var(--terracotta-clair);
+    font-size: 15px;
+    font-weight: 700;
+
+    margin: 20px 0 10px;
+}
+
+.formation-details p {
+    color: var(--gris);
+    font-size: 14px;
+    line-height: 1.7;
+
+    min-height: 0;
+    margin-bottom: 15px;
+}
+
+/* =========================================
+   LIENS OFFICIELS DE LA FORMATION
+========================================= */
+
+.formation-liens {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+    width: 100%;
+
+    /* Boutons juste après le contenu */
+    margin-top: 20px;
+}
+
+.formation-liens .bouton-document {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+    width: 100%;
+
+    padding: 12px 10px;
+
+    font-size: 12px;
+    text-align: center;
+}
+
+
+/* =========================================
+   PROCÉDURES DANS LA CARTE DOCUMENTS
 ========================================= */
 
 .liste-procedures {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+
+    gap: 0;
     width: 100%;
-    margin-top: 15px;
+
+    margin-top: 10px;
 }
 
+/* =========================================
+   CHAQUE PROCÉDURE
+========================================= */
+
 .procedure-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     width: 100%;
-    padding-top: 18px;
+    padding: 20px 0;
+
     border-top: 1px solid
         rgba(199, 123, 104, 0.25);
 }
@@ -1396,6 +1644,8 @@ section {
 .procedure-item h4 {
     color: var(--terracotta-clair);
     font-size: 14px;
+    font-weight: 700;
+
     margin-bottom: 8px;
 }
 
@@ -1405,27 +1655,38 @@ section {
     line-height: 1.6;
 
     min-height: 0;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
+
+/* =========================================
+   BOUTONS DES PROCÉDURES
+========================================= */
 
 .procedure-actions {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+
     gap: 8px;
+    width: 100%;
 }
 
 .procedure-actions .bouton-document {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+
     gap: 6px;
 
+    width: 100%;
     min-width: 0;
-    padding: 10px 6px;
+
+    padding: 10px 5px;
 
     font-size: 11px;
     white-space: nowrap;
 }
+
+/* Boutons télécharger des procédures */
 
 .procedure-actions .bouton-telecharger {
     background: transparent;
@@ -1438,22 +1699,6 @@ section {
     color: var(--bleu-nuit);
 }
 
-/* Garde les trois cartes alignées en haut */
-
-.documents-grille {
-    align-items: stretch;
-}
-
-/* Adaptation aux écrans plus étroits */
-
-@media screen and (max-width: 1150px) {
-
-    .procedure-actions {
-        grid-template-columns: 1fr;
-    }
-
-}
-
 
 /* =========================================
    BOUTONS DE LA VEILLE TECHNOLOGIQUE
@@ -1462,24 +1707,26 @@ section {
 .veille-boutons {
     display: flex;
     flex-direction: column;
+
     gap: 12px;
     width: 100%;
+
+    /* Les boutons suivent les paragraphes */
     margin-top: 20px;
 }
-
-/* Boutons consulter et télécharger */
 
 .veille-boutons .bouton-document {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
 
+    gap: 10px;
     width: 100%;
+
     padding: 12px 15px;
 }
 
-/* Bouton télécharger en doré */
+/* Bouton télécharger de la veille */
 
 .veille-boutons .veille-telecharger {
     background: transparent;
@@ -1492,22 +1739,74 @@ section {
     color: var(--bleu-nuit);
 }
 
-/* Aligner les cartes des documents */
 
-.document-carte {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* =========================================
+   RESPONSIVE - TABLETTES
+========================================= */
+
+@media screen and (max-width: 1100px) {
+
+    .documents {
+        padding: 80px 5%;
+    }
+
+    .documents-grille {
+        gap: 18px;
+    }
+
+    .document-carte {
+        padding: 25px 18px;
+    }
+
+    /* Boutons des procédures l'un sous l'autre */
+
+    .procedure-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .procedure-actions .bouton-document {
+        padding: 11px 8px;
+    }
 }
 
-.document-carte > .bouton-document {
-    margin-top: auto;
+@media screen and (max-width: 900px) {
+
+    .documents-grille {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
-.document-carte .veille-boutons {
-    margin-top: auto;
-}
 
+/* =========================================
+   RESPONSIVE - TÉLÉPHONES
+========================================= */
+
+@media screen and (max-width: 650px) {
+
+    .documents {
+        padding: 70px 5%;
+    }
+
+    .documents-grille {
+        grid-template-columns: 1fr;
+        gap: 20px;
+
+        max-width: 450px;
+    }
+
+    .document-carte {
+        padding: 25px 20px;
+    }
+
+    .procedure-actions {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .procedure-actions .bouton-document {
+        font-size: 11px;
+        padding: 10px 6px;
+    }
+}
 
 /* =========================================
    13. SECTION CONTACT
