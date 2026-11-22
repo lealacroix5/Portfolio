@@ -1223,8 +1223,44 @@ section {
     margin-top: 15px;
 }
 
-/* Rapport de stage */
 
+/* =========================================
+   CAPTURES DES PROJETS DE STAGE
+========================================= */
+
+.capture-stage {
+    width: 100%;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.capture-stage img {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    margin: 0 auto;
+
+    border-radius: 12px;
+    border: 1px solid var(--terracotta);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+
+    transition: transform 0.3s ease;
+}
+
+.capture-stage img:hover {
+    transform: scale(1.01);
+}
+
+.capture-stage p {
+    margin-top: 12px;
+    color: var(--gris);
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+/* Rapport de stage */
 .rapport-stage {
     border-color:
         rgba(214, 173, 96, 0.4);
