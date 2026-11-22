@@ -1,5 +1,5 @@
 
-# 💻 Portfolio professionnel — Léa Lacroix
+# Portfolio professionnel — Léa Lacroix
 
 Bienvenue sur mon portfolio professionnel !
 
@@ -9,7 +9,7 @@ professionnelles dans le domaine du développement informatique.
 
 ---
 
-## 👩‍💻 À propos
+## À propos
 
 Je suis actuellement étudiante en deuxième année de
 **BTS Services Informatiques aux Organisations (SIO)**,
@@ -25,7 +25,7 @@ Je développe mes compétences dans plusieurs langages et technologies :
 
 ---
 
-## 🎯 Objectifs du portfolio
+## Objectifs du portfolio
 
 Ce portfolio a été conçu afin de :
 
@@ -38,7 +38,7 @@ Ce portfolio a été conçu afin de :
 
 ---
 
-## 🛠️ Technologies utilisées
+## Technologies utilisées
 
 | Technologie | Utilisation |
 |---|---|
@@ -54,7 +54,7 @@ sur l'hébergement GitHub Pages.
 
 ---
 
-## 🎨 Identité visuelle
+## Identité visuelle
 
 Le portfolio utilise une identité visuelle composée de :
 
@@ -62,6 +62,7 @@ Le portfolio utilise une identité visuelle composée de :
 - Bleu royal
 - Blanc
 - Doré
+- Terracotta
 
 Le design est pensé pour être moderne, élégant, responsive
 et agréable à consulter.
@@ -71,7 +72,7 @@ viennent compléter l'interface.
 
 ---
 
-## 📁 Organisation du projet
+## Organisation du projet
 
 ```text
 Portfolio/
@@ -101,14 +102,13 @@ Portfolio/
 
 ---
 
-## 📄 Documents disponibles
+## Documents disponibles
 
 Le portfolio a vocation à regrouper :
 
 - Mon CV
 - Mes rapports de stage de première et deuxième année
 - Mes attestations de formation
-- Mes certifications
 - Mes procédures et documentations techniques
 - Mes travaux de veille informatique
 
@@ -116,7 +116,7 @@ Les documents sont proposés au format PDF.
 
 ---
 
-## 🚀 Hébergement
+## Hébergement
 
 Le portfolio est développé sous forme de site web statique.
 
@@ -128,7 +128,7 @@ Le lien sera ajouté après la publication du site.
 
 ---
 
-## 👩‍💻 Auteur
+## Auteur
 
 **Léa Lacroix**
 
